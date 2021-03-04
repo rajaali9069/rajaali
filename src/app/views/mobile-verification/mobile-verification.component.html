@@ -1,0 +1,35 @@
+<div class="banner text-center">
+    <h1 style="margin-bottom: 12px;">Email Verification</h1>
+    <p>Enter the OTP sent to your Email</p>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form [formGroup]="Form"
+                  (ngSubmit)="doSubmit()">
+                <div class="form-group">
+                    <mat-form-field appearance="outline">
+                        <mat-label> Code</mat-label>
+                        <input matInput
+                               formControlName="verify_code"
+                               required />
+                    </mat-form-field>
+                    <mat-error
+                    *ngIf="getValue('verify_code')?.invalid && (getValue('verify_code')?.dirty || getValue('verify_code')?.touched)">
+                    Code
+           is required </mat-error>
+                </div>
+                <button class="btn btn-primary"
+                        style="height: 50px;
+                        width: 50%;"
+                        [disabled]="Form.invalid"
+                        type="submit">
+                    SEND
+                </button>
+            </form>
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+
+</div>

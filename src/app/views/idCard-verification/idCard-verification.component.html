@@ -1,0 +1,55 @@
+
+  <div class="banner text-center">
+    <h5 style="    text-align: left;
+    margin-left: 160px;color: lightgray;">Home > ID Verification</h5>
+    <div style="margin-bottom: 5px;font-size: 22px;font-weight: 600;">Seller ID Verification</div>
+    <div style="margin-bottom: 15px;font-size: 18pxpx;font-weight: 600;color: darkgray;">Please attach front and back of
+      the ID Card</div>
+    <div fxLayout="row wrap"
+         fxLayoutAlign="space-between start"
+         fxLayoutGap="20px"
+         style="padding: 1px 70px 0px 86px;">
+      <div fxFlex.xl="100"
+           fxFlex.lg="100"
+           fxFlex.md="100"
+           fxFlex.sm="100"
+           fxFlex.xs="100">
+        <div fxLayout="row wrap"
+             style="padding: 51px;">
+          <div fxFlex="15"></div>
+          <div fxFlex="35">
+            <file-picker (onFileSelect)="onFileSelect($event, 1)"
+                         [isIconHidden]="false"
+                         editType="add"
+                         [image]="getImage('image', 1)"
+                         controlName="image"
+                         type=""
+                         [size]="{width: 50, height: 300}">
+            </file-picker>
+            <p style="text-align: center;margin-top: 20px;font-weight: 600;font-size: 18px;">Front CNIC</p>
+          </div>
+          <div fxFlex="35">
+            <file-picker (onFileSelect)="onFileSelect($event, 2)"
+                         [isIconHidden]="false"
+                         editType="add"
+                         [image]="getImage('image', 2)"
+                         controlName="image"
+                         type=""
+                         [size]="{width: 50, height: 300}">
+            </file-picker>
+            <p style="text-align: center;margin-top: 20px;font-weight: 600;font-size: 18px;">Back CNIC</p>
+          </div>
+          <div fxFlex="100"
+               style="margin-top: 20px;">
+            <button class="btn btn-primary"
+                    (click)="oncardVerification()"
+                    style="height: 50px;
+                    width: 15%;"
+                    [disabled]= '!onsumbit'>
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

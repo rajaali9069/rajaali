@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field {
+    width: 100%;
+}
+.preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    p {
+        text-align: center;
+        color: #000;
+    }
+}
+.btn-white1 {
+    background: white !important;
+    border-color: #00509c !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    height: 40px !important;
+    font-family: Heebo !important;
+    font-size: 14px !important;
+    color: #00509c !important;
+    text-decoration: none solid rgb(255, 255, 255) !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    fill: 00509c !important;
+    border: 1px solid !important;
+}
+.btn-blue {
+    background: #00509c !important;
+    border-color: #00509c !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    height: 40px !important;
+    font-family: Heebo !important;
+    font-size: 18px !important;
+    color: #ffffff !important;
+    text-decoration: none solid rgb(255, 255, 255) !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    fill: #00509c !important;
+}
+
+.btn-red {
+    background: #EB3026 !important;
+    border-color: #EB3026 !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    height: 40px !important;
+    font-family: Heebo !important;
+    font-size: 18px !important;
+    color: #ffffff !important;
+    text-decoration: none solid rgb(255, 255, 255) !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    fill: #EB3026 !important;
+}
+
+.btn-white {
+    background: white !important;
+    border-color: #00509c !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    height: 40px !important;
+    font-family: Heebo !important;
+    font-size: 18px !important;
+    color: #00509c !important;
+    text-decoration: none solid rgb(255, 255, 255) !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    fill: 00509c !important;
+    border: 1px solid !important;
+}

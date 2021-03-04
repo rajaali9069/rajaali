@@ -1,0 +1,104 @@
+<div class="footer-container"
+     style="margin-top: 20px;">
+    <div class="footer-wrapper">
+        <div fxLayout="row wrap"
+             fxLayoutAlign="space-around start"
+             style="    padding: 40px;">
+            <div fxFlex="15"
+                 fxFlex.xs="100">
+                <div class="footer-col-a mt-4">
+                    <h3><a href=""><img style="width: 70px;"
+                                 src="assets/images/abc-company-test-logo.png"></a></h3>
+                    <p><a href=""><img style="width: 26px;"
+                                 src="assets/images/fb.png"></a><a style="    margin-right: 5px;
+                        margin-left: 5px;"
+                           href=""><img style="width: 25px;"
+                                 src="assets/images/twitter.png"></a><a href="">
+                            <img style="width: 25px;"
+                                 src="assets/images/google.png"></a> </p>
+                </div>
+            </div>
+            <div fxFlex="20"
+                 fxFlex.xs="100">
+                <div class="footer-col-a mt-4">
+                    <h3>MAIN PAGE</h3>
+                    <p>Sell with Us</p>
+                    <p>About Us </p>
+                    <p>Contact Us </p>
+                    <p>Promos</p>
+                    <p>Become an Ambassador</p>
+                </div>
+            </div>
+            <div fxFlex="20"
+                 fxFlex.xs="100">
+                <div class="footer-col-a mt-4">
+                    <h3>POLICY</h3>
+                    <p>Tearms of Usage</p>
+                    <p>Privacy Policy</p>
+                    <p>Return Policy</p>
+                </div>
+            </div>
+            <div fxFlex="20"
+                 fxFlex.xs="100">
+                <div class="footer-col-a mt-4">
+                    <h3>CATEGORIES</h3>
+                    <p>Skincare </p>
+                    <p>Makeup</p>
+                    <p>Hair Care</p>
+                    <p>Bath & Body</p>
+                    <p>Beauty Suppliments</p>
+
+                </div>
+            </div>
+
+
+            <div fxFlex="25"
+                 fxFlex.xs="100">
+                <div class="footer-col-c mt-4">
+                    <h3>SUBSCRIBE</h3>
+                    <p>Subscribe to our newsletter, so that you can be the first to know about new offers and
+                        promotions.</p>
+                    <input type="text"
+                           class="footer-input"
+                           placeholder="Enter Email Address">
+                    <button class="footer-sign-btn">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="footer-wrapper">
+            <div fxLayout="row"
+                 fxLayoutAlign="space-between">
+                <div fxFlex="50"
+                     class="footer-links"
+                     style="text-align: left;">
+                    <ul>
+                        <li><a href="">© 2021. All Rights Reserved.</a></li>
+                    </ul>
+                </div>
+                <div fxFlex="50"
+                     fxLayoutAlign="end"
+                     class="footer-links">
+                    <ul>
+                        <!-- <li><a href="">V</a></li> -->
+                        <li><a href=""><img style="width: 50px;"
+                                     src="assets/images/paypal.png"></a></li>
+                        <li><a href=""><img style="width: 25px;"
+                                     src="assets/images/visa.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-to-top"
+             [ngClass]="{'show-scrollTop': windowScrolled}">
+            <button type="button"
+                    class="btn btn-sm scroll-btn active"
+                    data-toggle="button"
+                    aria-pressed="true"
+                    (click)="scrollToTop()">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+    </div>
+</div>

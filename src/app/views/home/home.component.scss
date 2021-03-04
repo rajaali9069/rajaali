@@ -1,0 +1,273 @@
+.bg-container {
+    width: 100%;
+    height: 480px;
+    margin-top: 70px;
+    background-image: url('/assets/images/vts_wall_b.jpg');
+    background-size: 100% 100%;
+}
+.banner-text {
+    text-align: center;
+    padding-top: 70px;
+}
+.card-title {
+    line-height: 1px;
+}
+.dollar-text{
+    font-size: 12px;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+}
+.card-btn {
+    font-size: 12px;
+    padding: 0px 2px 0px 2px;
+    margin-left: 16px;
+    font-weight: 500;
+    background-color: white;
+}
+.card-title {
+    font-weight: bold;
+}
+.carousel-control-prev-icon1 {
+    position: absolute;
+    background-color: lightgray;
+    // left: -15%;
+    height: 70px;
+    width: 18px;
+}
+.carousel-control-next-icon1 {
+    position: absolute;
+    background-color: lightgray;
+    // right: -15%;
+    height: 70px;
+    width: 18px;
+}
+.banner-text p {
+    font-size: 2.5em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.vendor-btn {
+    border: none;
+    outline-style: none;
+    padding: 5px 15px 5px 15px;
+    background-color: #FFFFFF;
+    color: #A3A3A3;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.visitor-btn {
+    border: none;
+    outline-style: none;
+    padding: 4px 14px 4px 14px;
+    background-color: #88A66A;
+    color: #EDF1E8;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.gold-container {
+    width: 100%;
+    background-color: #B7A40B;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.badge-btn {
+    border: 2px solid #E9E6DB;
+    padding: 4px 16px 4px 16px;
+    background-color: #B7A40B;
+    outline-style: none;
+    color: #E5DFBA;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.card-wrapper {
+    width: 80%;
+    margin: auto;
+}
+.card1-bg-img {
+    background-image: linear-gradient(
+        rgba(104, 128, 157, 0.8),
+        rgba(104, 128, 157, 0.8)
+      ),url('/assets/images/bill.jpg');
+    background-size: 100% 100%;
+}
+.card2-bg-img {
+    background-image: linear-gradient(
+        rgba(104, 128, 157, 0.8),
+        rgba(104, 128, 157, 0.8)
+      ),url('/assets/images/bill.jpg');
+    background-size: 100% 100%;
+}
+.card3-bg-img {
+    background-image: linear-gradient(
+        rgba(104, 128, 157, 0.8),
+        rgba(104, 128, 157, 0.8)
+      ),url('/assets/images/bill.jpg');
+    background-size: 100% 100%;
+}
+.card-text {
+    text-align: center;
+    padding: 15px 0px 0px 15px;
+    color: #FFFFFF;
+    
+}
+.site-card {
+    width: 100%;
+    height: 180px;
+}
+.list-btn {
+    border: none;
+    outline-style: none;
+    padding: 2px 14px 2px 14px;
+    background-color: #7A9C59;
+    color: #EDF1E8;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.event-btn {
+    border: none;
+    outline-style: none;
+    padding: 2px 14px 2px 14px;
+    background-color: #7A9C59;
+    color: #EDF1E8;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.invite-btn {
+    border: none;
+    outline-style: none;
+    padding: 2px 14px 2px 14px;
+    background-color: #7A9C59;
+    color: #EDF1E8;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.carosal-container {
+    width: 100%;
+    height: 300px;
+}
+.carosal-container img {
+    width: 100%;
+    height: 425px;
+}
+.card-title {
+    line-height: 1px;
+}
+.dollar-text{
+    font-size: 12px;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+}
+.card-btn {
+    font-size: 12px;
+    padding: 0px 2px 0px 2px;
+    margin-left: 16px;
+    font-weight: 500;
+    background-color: white;
+}
+.cardMain
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0px solid rgba(0,0,0,.125) !important;
+    border-radius: opx !important;
+}
+.card-title {
+    font-weight: bold;
+}
+.carousel-control-prev-icon {
+    position: absolute;
+    background-color: lightgray;
+    left: -15%;
+    height: 70px;
+    width: 18px;
+}
+.carousel-control-next-icon {
+    position: absolute;
+    background-color: lightgray;
+    right: -15%;
+    height: 70px;
+    width: 18px;
+}
+.bullets li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: 12px;
+    width: 12px;
+}
+.bullets li {
+    border-radius: 1000px;
+}
+
+@media only screen and (max-width: 970px) {
+    /* For mobile phones: */
+    .card-text {
+        text-align: center;
+        padding: 10px 0px 0px 10px;  
+    }
+    .site-card {
+        width: 100%;
+        height: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .list-btn {
+        
+        padding: 2px 10px 2px 10px;
+        font-size: 8px;
+    }
+    .event-btn {
+        padding: 2px 10px 2px 10px;
+        font-size: 8px;
+    }
+    .invite-btn {
+        padding: 2px 10px 2px 10px;
+        font-size: 8px;
+    }
+  }
+
+@media only screen and (max-width: 650px) {
+    /* For mobile phones: */
+    .bg-container {
+        height: 400px;
+    }
+   .banner-text p {
+       font-size: 1.5em;
+       line-height: 20px;
+   } 
+   .site-card {
+    width: 250px;
+    height: 180px;
+    margin-bottom: 10px;
+}
+   .carosal-container img {
+    width: 100%;
+    height: 180px;
+}
+.carosal-container {
+    height: 180px;
+}
+  }
+

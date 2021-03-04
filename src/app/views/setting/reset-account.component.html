@@ -1,0 +1,215 @@
+<form [formGroup]="Form"
+      (ngSubmit)="doSubmit()">
+  <div class="banner text-center">
+    <div style="margin-bottom: 15px;font-size: 22px;font-weight: 600;">Account Setting</div>
+    <div fxLayout="row wrap"
+         fxLayoutAlign="space-between start"
+         fxLayoutGap="20px"
+         style="margin-top: 10px;padding: 85px;">
+      <div fxFlex.xl="calc(20% - 20px)"
+           fxFlex.lg="calc(20% - 20px)"
+           fxFlex.md="calc(20% - 20px)"
+           fxFlex.sm="100"
+           fxFlex.xs="100">
+
+      </div>
+      <div fxFlex.xl="calc(60% - 20px)"
+           fxFlex.lg="calc(60% - 20px)"
+           fxFlex.md="calc(60% - 20px)"
+           fxFlex.sm="100"
+           fxFlex.xs="100">
+        <div fxLayout="row wrap"
+             fxLayoutAlign="space-between start"
+             style="margin-left: 20px;">
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>First Name </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="fname" />
+                <mat-error
+                           *ngIf="getValue('fname')?.invalid && (getValue('fname')?.dirty || getValue('fname')?.touched)">
+                  First Name
+                  is required and only Alphabet</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Last Name </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="lname" />
+                <mat-error
+                           *ngIf="getValue('lname')?.invalid && (getValue('lname')?.dirty || getValue('lname')?.touched)">
+                  Last Name
+                  is required and only Alphabet</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>UserName </mat-label>
+                <input matInput
+                       type="text"
+                       readonly
+                       formControlName="user_name" />
+                <mat-error
+                           *ngIf="getValue('user_name')?.invalid && (getValue('user_name')?.dirty || getValue('user_name')?.touched)">
+                  UserName
+                  is required </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Email </mat-label>
+                <input matInput
+                       readonly
+                       formControlName="email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>New Password </mat-label>
+                <input matInput
+                       formControlName="newPassword"
+                       type="password"
+                       minlength="6" />
+                <mat-error
+                           *ngIf="getValue('newPassword')?.invalid && (getValue('newPassword')?.dirty || getValue('newPassword')?.touched)">
+                  New Password
+                  is required & must be minimum 6 digits</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Confirm Password </mat-label>
+                <input matInput
+                       formControlName="confirmPassword"
+                       type="password"
+                       minlength="6" />
+                <mat-error
+                           *ngIf="getValue('confirmPassword')?.invalid && (getValue('confirmPassword')?.dirty || getValue('confirmPassword')?.touched)">
+                  Confirm Password
+                  is required  & must be minimum 6 digits</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Contact Number </mat-label>
+                <input matInput
+                       type="tel"
+                       required
+                       formControlName="phone_number" />
+                <mat-error
+                           *ngIf="getValue('phone_number')?.invalid && (getValue('phone_number')?.dirty || getValue('phone_number')?.touched)">
+                  Phone Number
+                  is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Address </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="address" />
+                <mat-error
+                           *ngIf="getValue('address')?.invalid && (getValue('address')?.dirty || getValue('address')?.touched)">
+                  Address
+                  is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>City </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="city" />
+                <mat-error *ngIf="getValue('city')?.invalid && (getValue('city')?.dirty || getValue('city')?.touched)">
+                  City
+                  is required and only Alphabet</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Postal Code </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="post_code" />
+                <mat-error
+                           *ngIf="getValue('post_code')?.invalid && (getValue('post_code')?.dirty || getValue('post_code')?.touched)">
+                  Postal Code
+                  is required </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="49">
+            <file-picker (onFileSelect)="onFileSelect($event, 1)"
+                         [isIconHidden]="false"
+                         editType="add"
+                         [image]="getImage('image', 1)"
+                         controlName="image"
+                         type=""
+                         [size]="{width: 200, height: 300}">
+            </file-picker>
+            <p style="text-align: center;margin-top: 20px;font-weight: 600;font-size: 18px;">Profile Image</p>
+          </div>
+          <!-- <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Account Type </mat-label>
+                <mat-select aria-readonly="value"  formControlName="type">
+                  <mat-option  value="buyer">Buyer</mat-option>
+                  <mat-option value="seller">Seller</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div> -->
+
+          <div fxFlex="100" style="margin-top: 20px;">
+            <button class="btn btn-primary"
+                    style="height: 50px;
+                      width: 50%;"
+                    
+                    type="submit">
+              Update account
+            </button>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div fxFlex.xl="calc(20% - 20px)"
+           fxFlex.lg="calc(20% - 20px)"
+           fxFlex.md="calc(20% - 20px)"
+           fxFlex.sm="100"
+           fxFlex.xs="100">
+
+      </div>
+    </div>
+  </div>
+</form>

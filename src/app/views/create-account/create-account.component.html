@@ -1,0 +1,212 @@
+<form [formGroup]="Form"
+      (ngSubmit)="doSubmit()">
+  <div class="banner text-center">
+    <div style="margin-bottom: 15px;font-size: 22px;font-weight: 600;">Create an Account</div>
+    <div fxLayout="row wrap"
+         fxLayoutAlign="space-between start"
+         fxLayoutGap="20px"
+         style="margin-top: 10px;padding: 85px;">
+      <div fxFlex.xl="calc(50% - 20px)"
+           fxFlex.lg="calc(50% - 20px)"
+           fxFlex.md="calc(50% - 20px)"
+           fxFlex.sm="100"
+           fxFlex.xs="100">
+        <div fxLayout="row wrap"
+             fxLayoutAlign="space-between start"
+             style="margin-left: 20px;">
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>First Name </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="first_name" />
+                <mat-error
+                           *ngIf="getValue('first_name')?.invalid && (getValue('first_name')?.dirty || getValue('first_name')?.touched)">
+                  First Name
+                  is required and only Alphabet</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Last Name </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="last_name" />
+                <mat-error
+                           *ngIf="getValue('last_name')?.invalid && (getValue('last_name')?.dirty || getValue('last_name')?.touched)">
+                  Last Name
+                  is required and only Alphabet</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>UserName </mat-label>
+                <input matInput
+                       type="text"
+                       formControlName="user_name" />
+                <mat-error
+                           *ngIf="getValue('user_name')?.invalid && (getValue('user_name')?.dirty || getValue('user_name')?.touched)">
+                  UserName
+                  is required </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Email </mat-label>
+                <input matInput
+                       formControlName="email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Password </mat-label>
+                <input matInput
+                       formControlName="password"
+                       type="password"
+                       minlength="6" />
+                <mat-error
+                           *ngIf="getValue('password')?.invalid && (getValue('password')?.dirty || getValue('password')?.touched)">
+                  Password
+                  is & must be minimum 6 digits</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Contact Number </mat-label>
+                <input matInput
+                       type="tel"
+                       required
+                       formControlName="phone_number" />
+                <mat-error
+                           *ngIf="getValue('phone_number')?.invalid && (getValue('phone_number')?.dirty || getValue('phone_number')?.touched)">
+                  Phone Number
+                  is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Address </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="address" />
+                <mat-error
+                           *ngIf="getValue('address')?.invalid && (getValue('address')?.dirty || getValue('address')?.touched)">
+                  Address
+                  is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>City </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="city" />
+                <mat-error *ngIf="getValue('city')?.invalid && (getValue('city')?.dirty || getValue('city')?.touched)">
+                  City
+                  is required and only Alphabet</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Postal Code </mat-label>
+                <input matInput
+                       type="text"
+                       required
+                       formControlName="post_code" />
+                <mat-error
+                           *ngIf="getValue('post_code')?.invalid && (getValue('post_code')?.dirty || getValue('post_code')?.touched)">
+                  Postal Code
+                  is required </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="48">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>Account Type </mat-label>
+                <mat-select formControlName="type">
+                  <mat-option value="buyer">Buyer</mat-option>
+                  <mat-option value="seller">Seller</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxFlex="100">
+            <div class="form-group">
+              <div class="form-check"
+                   style="margin-bottom: 0.8rem;">
+                <input class="form-check-input"
+                       type="checkbox"
+                       (click)="checkbox(checked)">
+                <label class="form-check-label"
+                       style="font-size: 12px;">
+                  By Creating an account, you agree to our User Agreement and acknowledge reading our User Privacy
+                  Notice.
+                </label>
+              </div>
+            </div>
+          </div>
+          <div fxFlex="100">
+            <button class="btn btn-primary"
+                    style="height: 50px;
+                      width: 50%;"
+                    [disabled]="Form.invalid || !checked"
+                    type="submit">
+              Create account
+            </button>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div fxFlex.xl="calc(50% - 20px)"
+           fxFlex.lg="calc(50% - 20px)"
+           fxFlex.md="calc(50% - 20px)"
+           fxFlex.sm="100"
+           fxFlex.xs="100">
+        <div class="verticalLine">
+
+        </div>
+        <div style="position: absolute;margin-top: 175px;margin-left: 54px;">
+          or
+        </div>
+        <div class="verticalLine"
+             style="margin-top: 200px;    ">
+
+        </div>
+        <div style="margin-top: 141px;">
+          <button mat-button
+                    class="btn-white1"><a href="https://www.facebook.com/">Continue with Facebook</a>
+            </button>
+          <div style="margin-top: 15px;"><button mat-button
+                    class="btn-white1"><a href="https://www.gmail.com/">Continue with Google</a>
+            </button></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
